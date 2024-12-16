@@ -1,0 +1,16 @@
+spring.application.name=NimapJavaMachineTest
+
+# Oracle Database Configuration (Oracle 11g)
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:orcl
+spring.datasource.username=hr
+spring.datasource.password=hr
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+# Hibernate JPA Configuration (Oracle 11g)
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect  # Updated dialect for 11g compatibility
+
+# Server Configuration
+server.port=8080

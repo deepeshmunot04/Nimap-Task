@@ -1,0 +1,79 @@
+package com.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+public class Product {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int prodId;
+
+	private String prodName;
+	private double price;
+
+	@ManyToOne
+	@JoinColumn(name = "categID")
+	@JsonIgnoreProperties("products")
+	private Category category;
+
+	// Constructor
+	public Product() {
+		super();
+
+	}
+
+	public Product(String prodName, double price, Category category) {
+		super();
+		this.prodName = prodName;
+		this.price = price;
+		this.category = category;
+	}
+
+	public int getProdId() {
+		return prodId;
+	}
+
+	public void setProdId(int prodId) {
+		this.prodId = prodId;
+	}
+
+	public String getProdName() {
+		return prodName;
+	}
+
+	public void setProdName(String prodName) {
+		this.prodName = prodName;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	@Override
+	public String toString() {
+		return "Product{ " + "id = " + prodId + ", name = '" + prodName + '\'' + ", price = " + price + ", category = "
+				+ category + " }";
+	}
+
+}

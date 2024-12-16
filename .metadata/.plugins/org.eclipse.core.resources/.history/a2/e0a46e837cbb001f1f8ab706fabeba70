@@ -1,0 +1,48 @@
+spring.application.name=NimapJavaMachineTest
+
+## H2 Database Configuration
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.driver-class-name=org.h2.Driver
+#spring.datasource.username=
+#spring.datasource.password=
+
+
+## JPA Configuration
+#spring.jpa.show-sql=true
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#spring.h2.console.enabled=true
+#spring.h2.console.path=/h2-console
+
+
+## Database Configuration
+#spring.datasource.url=jdbc:oracle:thin:@localhost:1521:orcl
+#spring.datasource.username=chr
+#spring.datasource.password=hr
+#spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+
+## JPA (Hibernate) Configuration
+#spring.jpa.hibernate.ddl-auto=create
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
+#spring.jpa.database-platform=org.hibernate.dialect.OracleDialect
+
+
+## Server Configuration
+#server.port=8080
+
+# Oracle Database Configuration
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:orcl
+spring.datasource.username=hr
+spring.datasource.password=hr
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+# Hibernate JPA Configuration
+spring.jpa.hibernate.ddl-auto=ceate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.database-platform=org.hibernate.dialect.OracleDialect
+
+# Server Configuration
+server.port=8080

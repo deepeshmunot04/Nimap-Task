@@ -60,4 +60,4 @@ This is a Spring Boot application that implements CRUD operations for `Category`
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sarvesh-0/Nimap_Machine_Test.git
+   https://github.com/deepeshmunot04/Nimap-Task.git
